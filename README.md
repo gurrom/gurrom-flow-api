@@ -35,12 +35,175 @@ Authorization: Bearer YOUR_API_KEY
   "To": "27828703205",
   "MessageText": "Test from Gurrom Flow"
 }
+```
 
-**### 📥 Response**
+---
 
+### 📥 Response
+
+```json
 {
   "isSuccess": true,
   "messageStatus": "SUCCESS",
   "messageTrackingNumber": "3727691",
   "creditsAvailable": 76825
 }
+```
+
+---
+
+💡 That’s it — your SMS is sent.
+
+---
+
+## 🧪 Code Examples
+
+### C# (.NET)
+
+```csharp
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+var client = new HttpClient();
+
+client.DefaultRequestHeaders.Authorization = 
+    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "YOUR_API_KEY");
+
+var json = @"{
+  ""AccountID"": ""YOUR_ACCOUNT_ID"",
+  ""To"": ""27828703205"",
+  ""MessageText"": ""Test from Gurrom Flow""
+}";
+
+var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+var response = await client.PostAsync(
+    "https://api.flow.gurrom.co.za/api/messageapi/sendmessage",
+    content
+);
+
+var result = await response.Content.ReadAsStringAsync();
+Console.WriteLine(result);
+```
+
+---
+
+### Node.js
+
+```javascript
+const axios = require('axios');
+
+axios.post(
+    'https://api.flow.gurrom.co.za/api/messageapi/sendmessage',
+    {
+        AccountID: "YOUR_ACCOUNT_ID",
+        To: "27828703205",
+        MessageText: "Test from Gurrom Flow"
+    },
+    {
+        headers: {
+            Authorization: "Bearer YOUR_API_KEY"
+        }
+    }
+)
+.then(res => console.log(res.data))
+.catch(err => console.error(err));
+```
+
+---
+
+### Python
+
+```python
+import requests
+
+response = requests.post(
+    "https://api.flow.gurrom.co.za/api/messageapi/sendmessage",
+    json={
+        "AccountID": "YOUR_ACCOUNT_ID",
+        "To": "27828703205",
+        "MessageText": "Test from Gurrom Flow"
+    },
+    headers={
+        "Authorization": "Bearer YOUR_API_KEY"
+    }
+)
+
+print(response.json())
+```
+
+---
+
+## 📬 Postman Collection
+
+Import the collection to get started instantly:
+
+👉 ./postman_collection.json
+
+---
+
+## 📖 API Details
+
+| Field        | Type   | Description |
+|-------------|--------|-------------|
+| AccountID   | string | Your account identifier |
+| To          | string | Recipient number in international format (e.g. 2782...) |
+| MessageText | string | SMS message content |
+
+---
+
+## 📊 Response Fields
+
+| Field                  | Description |
+|-----------------------|------------|
+| isSuccess             | Indicates success |
+| messageStatus         | Status of the message |
+| messageTrackingNumber | Unique message ID |
+| creditsAvailable      | Remaining SMS credits |
+
+---
+
+## 🚀 Use Cases
+
+- OTP / verification messages  
+- Transactional alerts  
+- System notifications  
+- Customer communication  
+- Billing reminders  
+
+---
+
+## 🌍 Why Gurrom Flow?
+
+- 🇿🇦 Optimised for South African delivery
+- ⚡ Simple REST API (no complexity)
+- 💰 Cost-effective vs global providers
+- 🔌 Built for integration into existing systems
+
+---
+
+## 🔜 Coming Soon
+
+- WhatsApp API  
+- Email API  
+- Messaging workflows & automation  
+- Webhooks & delivery tracking  
+
+---
+
+## 🚀 Get Access
+
+👉 https://flow.gurrom.co.za  
+👉 contact@gurrom.co.za  
+
+---
+
+## 🔍 Keywords
+
+SMS API South Africa  
+Send SMS via API  
+Transactional SMS API  
+Bulk SMS API  
+Messaging API REST  
+WhatsApp API (coming soon)
