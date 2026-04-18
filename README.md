@@ -1,3 +1,6 @@
+![API Status](https://img.shields.io/badge/status-live-green)
+![Region](https://img.shields.io/badge/region-South%20Africa-blue)
+
 # Gurrom Flow SMS API 🚀
 
 Send SMS in seconds via a simple, reliable REST API.
@@ -6,9 +9,6 @@ Send SMS in seconds via a simple, reliable REST API.
 ✔ Built for transactional messaging  
 ✔ Scalable (350k+ SMS/month infrastructure)  
 ✔ South Africa-ready 🇿🇦  
-
-![API Status](https://img.shields.io/badge/status-live-green)
-![Region](https://img.shields.io/badge/region-South%20Africa-blue)
 
 ---
 
