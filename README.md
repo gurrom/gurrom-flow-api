@@ -35,7 +35,7 @@ Authorization: Bearer YOUR_API_KEY
 ```json
 {
   "AccountID": "YOUR_ACCOUNT_ID",
-  "To": "27828703205",
+  "To": "2782XXXXXXX",
   "MessageText": "Test from Gurrom Flow"
 }
 ```
