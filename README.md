@@ -207,7 +207,7 @@ Import into Postman:
 
 ## 🚀 Get Access
 
-👉 https://flow-gurrom.figma.site/  
+👉 [Get Access Here](https://flow.gurrom.co.za/get-access)  
 👉 support@gurrom.co.za  
 
 ---
